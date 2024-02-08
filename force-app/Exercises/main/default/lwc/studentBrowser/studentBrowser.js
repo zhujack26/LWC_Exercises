@@ -1,7 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import getStudents from '@salesforce/apex/StudentBrowser.getStudents';
 
 export default class StudentBrowser extends LightningElement {
-    studentList = [];
+  /*   studentList = [];
     constructor() {
         super();
         const studentNames = ['Rad', 'Stuart', 'Andres', 'Rahul', 'Amit', 'Simon'];
@@ -13,5 +14,6 @@ export default class StudentBrowser extends LightningElement {
             'Id': index
           };
         });
-      }
+      } */
+    @wire(getStudents, { instructorId: "", courseDeliveryId: ""}) students;
 }
