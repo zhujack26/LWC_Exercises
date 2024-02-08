@@ -21,6 +21,7 @@ public with sharing class StudentBrowser {
 		query += 'WITH SECURITY_ENFORCED ';
 		query += 'ORDER BY Name';
 		
+        System.debug(query);
 		return Database.query(query);
 
     }
