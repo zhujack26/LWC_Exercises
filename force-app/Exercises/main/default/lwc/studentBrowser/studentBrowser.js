@@ -1,8 +1,8 @@
-import { LightningElement, wire } from 'lwc';
-import getStudents from '@salesforce/apex/StudentBrowser.getStudents';
+import { LightningElement, wire } from "lwc";
+import getStudents from "@salesforce/apex/StudentBrowser.getStudents";
 
 export default class StudentBrowser extends LightningElement {
-  /*Delete
+	/*Delete
     studentList = [];
     constructor() {
         super();
@@ -16,5 +16,12 @@ export default class StudentBrowser extends LightningElement {
           };
         });
       } */
-    @wire(getStudents, { instructorId: "", courseDeliveryId: ""}) students;
+	@wire(getStudents, { instructorId: "$selectedInstructorId", courseDeliveryId: "$selectedDeliveryId" })
+	students;
+	selectedDeliveryId = "";
+	selectedInstructorId = "";
+	handleFilterChange(event) {
+		this.selectedDeliveryId = event.detail.deliveryId;
+		this.selectedInstructorId = event.detail.instructorId;
+	}
 }
