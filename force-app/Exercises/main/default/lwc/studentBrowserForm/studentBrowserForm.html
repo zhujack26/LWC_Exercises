@@ -9,12 +9,20 @@
                         onchange={onInstructorChange}>
                     </lightning-combobox>
                 </lightning-layout-item>
+
                 <!-- Deliveries drop-down -->
                 <lightning-layout-item padding="around-small" size="4">
                     <lightning-combobox name="deliverySelector" label="Select Delivery" variant="label-hidden"
                         value={selectedDeliveryId} options={deliveries} placeholder="Select a delivery"
                         onchange={onDeliveryChange}>
                     </lightning-combobox>
+                </lightning-layout-item>
+                
+                <!-- Add New Delivery button (enabled if instructorselected)-->
+                <lightning-layout-item padding="around-small">
+                    <lightning-button variant="brand" disabled={isButtonDisabled} label="Add New Delivery"
+                        onclick={onAddNewDelivery}>
+                    </lightning-button>
                 </lightning-layout-item>
             </lightning-layout>
         </lightning-card>
