@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 640,
+    "serverMaxRevisionCounter": 644,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 111,
@@ -926,26 +926,26 @@
             "isNameObsolete": false
         },
         "LightningComponentBundle__studentDetail": {
-            "serverRevisionCounter": 456,
-            "lastRetrievedFromServer": 456,
+            "serverRevisionCounter": 641,
+            "lastRetrievedFromServer": 641,
             "memberType": "LightningComponentBundle",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.js": {
-            "serverRevisionCounter": 457,
-            "lastRetrievedFromServer": 457,
+            "serverRevisionCounter": 642,
+            "lastRetrievedFromServer": 642,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.html": {
-            "serverRevisionCounter": 458,
-            "lastRetrievedFromServer": 458,
+            "serverRevisionCounter": 643,
+            "lastRetrievedFromServer": 643,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.js-meta.xml": {
-            "serverRevisionCounter": 459,
-            "lastRetrievedFromServer": 459,
+            "serverRevisionCounter": 644,
+            "lastRetrievedFromServer": 644,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },

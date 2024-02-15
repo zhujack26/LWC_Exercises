@@ -23,7 +23,7 @@ export default class StudentDetail extends LightningElement {
 	//TODO #4: use wire service to call getRecord, passing in our studentId and array of fields.
 	//		   Store the result in a property named wiredStudent.
 	@wire(getRecord, { recordId: "$studentId", fields })
-	wiredStsudent;
+	wiredStudent;
 
 	get name() {
 		return this._getDisplayValue(this.wiredStudent.data, FIELD_Name);
