@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 510,
+    "serverMaxRevisionCounter": 514,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 111,
@@ -1007,6 +1007,30 @@
             "serverRevisionCounter": 488,
             "lastRetrievedFromServer": 488,
             "memberType": "FlexiPage",
+            "isNameObsolete": false
+        },
+        "LightningComponentBundle__deliveryListAction": {
+            "serverRevisionCounter": 511,
+            "lastRetrievedFromServer": 511,
+            "memberType": "LightningComponentBundle",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__deliveryListAction/deliveryListAction.js": {
+            "serverRevisionCounter": 512,
+            "lastRetrievedFromServer": 512,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__deliveryListAction/deliveryListAction.js-meta.xml": {
+            "serverRevisionCounter": 513,
+            "lastRetrievedFromServer": 513,
+            "memberType": "LightningComponentResource",
+            "isNameObsolete": false
+        },
+        "LightningComponentResource__deliveryListAction/deliveryListAction.html": {
+            "serverRevisionCounter": 514,
+            "lastRetrievedFromServer": 514,
+            "memberType": "LightningComponentResource",
             "isNameObsolete": false
         }
     }
