@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 631,
+    "serverMaxRevisionCounter": 636,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 111,
@@ -1138,6 +1138,18 @@
         "AuraDefinition__Override_View_CourseAttendee/Override_View_CourseAttendee.cmp": {
             "serverRevisionCounter": 630,
             "lastRetrievedFromServer": 630,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinitionBundle__AwApp": {
+            "serverRevisionCounter": 635,
+            "lastRetrievedFromServer": 635,
+            "memberType": "AuraDefinitionBundle",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__AwApp/AwApp.app": {
+            "serverRevisionCounter": 636,
+            "lastRetrievedFromServer": 636,
             "memberType": "AuraDefinition",
             "isNameObsolete": false
         }
