@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 644,
+    "serverMaxRevisionCounter": 659,
     "sourceMembers": {
         "ListView__Account.AllAccounts": {
             "serverRevisionCounter": 111,
@@ -326,7 +326,7 @@
             "isNameObsolete": false
         },
         "Profile__Admin": {
-            "serverRevisionCounter": 619,
+            "serverRevisionCounter": 645,
             "lastRetrievedFromServer": 619,
             "memberType": "Profile",
             "isNameObsolete": false
@@ -926,26 +926,26 @@
             "isNameObsolete": false
         },
         "LightningComponentBundle__studentDetail": {
-            "serverRevisionCounter": 641,
-            "lastRetrievedFromServer": 641,
+            "serverRevisionCounter": 647,
+            "lastRetrievedFromServer": 647,
             "memberType": "LightningComponentBundle",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.js": {
-            "serverRevisionCounter": 642,
-            "lastRetrievedFromServer": 642,
+            "serverRevisionCounter": 648,
+            "lastRetrievedFromServer": 648,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.html": {
-            "serverRevisionCounter": 643,
-            "lastRetrievedFromServer": 643,
+            "serverRevisionCounter": 649,
+            "lastRetrievedFromServer": 649,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentDetail/studentDetail.js-meta.xml": {
-            "serverRevisionCounter": 644,
-            "lastRetrievedFromServer": 644,
+            "serverRevisionCounter": 650,
+            "lastRetrievedFromServer": 650,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
@@ -962,8 +962,8 @@
             "isNameObsolete": false
         },
         "ApexClass__CourseDeliveryLocations": {
-            "serverRevisionCounter": 442,
-            "lastRetrievedFromServer": 442,
+            "serverRevisionCounter": 646,
+            "lastRetrievedFromServer": 646,
             "memberType": "ApexClass",
             "isNameObsolete": false
         },
@@ -1162,6 +1162,60 @@
         "AuraDefinition__AwAppTemplate/AwAppTemplate.cmp": {
             "serverRevisionCounter": 640,
             "lastRetrievedFromServer": 640,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "ApexPage__DeliveryListVF": {
+            "serverRevisionCounter": 659,
+            "lastRetrievedFromServer": 659,
+            "memberType": "ApexPage",
+            "isNameObsolete": false
+        },
+        "AuraDefinitionBundle__vfDependency": {
+            "serverRevisionCounter": 651,
+            "lastRetrievedFromServer": 651,
+            "memberType": "AuraDefinitionBundle",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependency.app": {
+            "serverRevisionCounter": 657,
+            "lastRetrievedFromServer": 657,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependencyController.js": {
+            "serverRevisionCounter": 652,
+            "lastRetrievedFromServer": 652,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependencyHelper.js": {
+            "serverRevisionCounter": 653,
+            "lastRetrievedFromServer": 653,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependency.css": {
+            "serverRevisionCounter": 654,
+            "lastRetrievedFromServer": 654,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependency.auradoc": {
+            "serverRevisionCounter": 655,
+            "lastRetrievedFromServer": 655,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependencyRenderer.js": {
+            "serverRevisionCounter": 656,
+            "lastRetrievedFromServer": 656,
+            "memberType": "AuraDefinition",
+            "isNameObsolete": false
+        },
+        "AuraDefinition__vfDependency/vfDependency.svg": {
+            "serverRevisionCounter": 658,
+            "lastRetrievedFromServer": 658,
             "memberType": "AuraDefinition",
             "isNameObsolete": false
         }
