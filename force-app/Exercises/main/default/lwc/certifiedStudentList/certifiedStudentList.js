@@ -5,10 +5,10 @@ import { refreshApex } from "@salesforce/apex";
 
 export default class CertifiedStudentList extends LightningElement {
 	@api certificationId = 0;
-	@api certificationName = "";
+	@api certificationName = '';
 	certifiedStudents;
-	btnGropupDisabled = true;
-	Error;
+	btnGroupDisabled = true;
+	error;
 	_wiredStudentResult;
 	@wire(getCertifiedStudents, { certificationId: "$certificationId" })
 	wired_getCertifiedStudents(result) {
@@ -26,39 +26,6 @@ export default class CertifiedStudentList extends LightningElement {
 		} else if (result.error) {
 			this.error = result.error;
 		}
-	}
-	onRowSelection(event) {
-		const numSelected = event.detail.selectedRows.length;
-		this.btnGroupDisabled = numSelected === 0;
-	}
-	getSelectedIDs() {
-		const datatable = this.template.querySelector("lightning-datatable");
-		const ids = datatable.getSelectedRows().map( (r) => (r.certificationHeldId));
-		return ids;
-	}
-	onCertAction(event) {
-		const btnClicked = event.target.getAttribute("data-btn-id");
-		switch (btnClicked) {
-			case "btnEmail":
-				break;
-			case "btnSendCert":
-				break;
-			case "btnDelete":
-				this.onDelete();
-				break;
-			default:
-				break;
-		}
-	}
-	onDelete() {
-		const certificationIds = this.getSelectedIDs();
-		deleteStudentCertification({ certificationIds })
-			.then(() => {
-				refreshApex(this._wiredStudentResult);
-			})
-			.catch((error) => {
-				this.error = error;
-			});
 	}
 	columnConfig = [
 		{
@@ -82,4 +49,40 @@ export default class CertifiedStudentList extends LightningElement {
 			type: "phone"
 		}
 	];
+	onRowSelection(event) {
+		const numSelected = event.detail.selectedRows.length;
+		this.btnGroupDisabled = (numSelected === 0);
+	}
+	getSelectedIDs() {
+		const datatable = this.template.querySelector('lightning-datatable');
+		const ids = datatable.getSelectedRows().map( (r) => (
+			r.certificationHeldId
+		));
+		return ids;
+	}
+	onCertActions (event) {
+		const btnClicked = 
+		event.target.getAttribute('data-btn-id');
+		switch (btnClicked) {
+			case "btnEmail":
+				break;
+			case "btnSendCert":
+				break;
+			case "btnDelete":
+				this.onDelete();
+				break;
+			default:
+				break;
+		}
+	}
+	onDelete() {
+		const certificationIds = this.getSelectedIDs ();
+		deleteStudentCertification({ certificationIds })
+			.then(	() => {
+				refreshApex(this._wiredStudentResult);
+			})
+			.catch(error => {
+				this.error = error;
+			});
+	}
 }
