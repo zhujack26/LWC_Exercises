@@ -16,4 +16,12 @@ public with sharing class CertifiedStudentList {
             ORDER BY Certified_Professional__r.Name
             ];
     }
+    
+    //methods that include DML statements cannot be cached.
+    @AuraEnabled
+    public static void deleteStudentCertification(
+        List<String> certificationIds) {
+            delete[SELECT id FROM Certification_Held__c
+            WHERE Id IN: certificationIds];
+        }
 }
