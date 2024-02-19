@@ -5,6 +5,7 @@ export default class CertifiedStudentList extends LightningElement {
 	@api certificationId = 0;
 	@api certificationName = "";
 	certifiedStudents;
+	btnGropupDisabled = true;
 	Error;
 	@wire(getCertifiedStudents, { certificationId: "$certificationId" })
 	wired_getCertifiedStudents(result) {
@@ -21,6 +22,10 @@ export default class CertifiedStudentList extends LightningElement {
 		} else if (result.error) {
 			this.error = result.error;
 		}
+	}
+	onRowSelection(event) {
+		const numSelected = event.detail.selectedRows.length;
+		this.btnGroupDisabled = numSelected === 0;
 	}
 	columnConfig = [
 		{
