@@ -5,7 +5,7 @@ import { refreshApex } from "@salesforce/apex";
 
 export default class CertifiedStudentList extends LightningElement {
 	@api certificationId = 0;
-	@api certificationName = '';
+	@api certificationName = "";
 	certifiedStudents;
 	btnGroupDisabled = true;
 	error;
@@ -51,18 +51,15 @@ export default class CertifiedStudentList extends LightningElement {
 	];
 	onRowSelection(event) {
 		const numSelected = event.detail.selectedRows.length;
-		this.btnGroupDisabled = (numSelected === 0);
+		this.btnGroupDisabled = numSelected === 0;
 	}
 	getSelectedIDs() {
-		const datatable = this.template.querySelector('lightning-datatable');
-		const ids = datatable.getSelectedRows().map( (r) => (
-			r.certificationHeldId
-		));
+		const datatable = this.template.querySelector("lightning-datatable");
+		const ids = datatable.getSelectedRows().map((r) => r.certificationHeldId);
 		return ids;
 	}
-	onCertActions (event) {
-		const btnClicked = 
-		event.target.getAttribute('data-btn-id');
+	onCertActions(event) {
+		const btnClicked = event.target.getAttribute("data-btn-id");
 		switch (btnClicked) {
 			case "btnEmail":
 				break;
@@ -76,12 +73,12 @@ export default class CertifiedStudentList extends LightningElement {
 		}
 	}
 	onDelete() {
-		const certificationIds = this.getSelectedIDs ();
+		const certificationIds = this.getSelectedIDs();
 		deleteStudentCertification({ certificationIds })
-			.then(	() => {
+			.then(() => {
 				refreshApex(this._wiredStudentResult);
 			})
-			.catch(error => {
+			.catch((error) => {
 				this.error = error;
 			});
 	}

@@ -4,20 +4,6 @@ import { publish, MessageContext } from "lightning/messageService";
 import SELECTED_STUDENT_CHANNEL from "@salesforce/messageChannel/SelectedStudentChannel__c";
 
 export default class StudentBrowser extends LightningElement {
-	/*Delete
-    studentList = [];
-    constructor() {
-        super();
-        const studentNames = ['Rad', 'Stuart', 'Andres', 'Rahul', 'Amit', 'Simon'];
-        this.studentList = studentNames.map( (studentName, index) => {
-          return {
-            'sobjectType': 'Contact',
-            'Name': studentName,
-            'PhotoUrl': '/services/images/photo/003B0FakePictId',
-            'Id': index
-          };
-        });
-      } */
 	@wire(getStudents, { instructorId: "$selectedInstructorId", courseDeliveryId: "$selectedDeliveryId" })
 	students;
 	selectedDeliveryId = "";
@@ -36,4 +22,25 @@ export default class StudentBrowser extends LightningElement {
 			studentId: studentId
 		});
 	}
+	cols = [
+		{
+			fieldName: "Name",
+			label: "Name"
+		},
+		{
+			fieldName: "Title",
+			label: "Title",
+			hiddenOnMobile: true
+		},
+		{
+			fieldName: "Phone",
+			label: "Phone",
+			type: "phone"
+		},
+		{
+			fieldName: "Email",
+			label: "E-Mail",
+			type: "email"
+		}
+	];
 }
