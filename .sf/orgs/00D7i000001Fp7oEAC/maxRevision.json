@@ -751,12 +751,6 @@
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
-        "LightningComponentBundle__studentBrowser": {
-            "serverRevisionCounter": 810,
-            "lastRetrievedFromServer": 810,
-            "memberType": "LightningComponentBundle",
-            "isNameObsolete": false
-        },
         "LightningComponentResource__studentBrowser/studentBrowser.js": {
             "serverRevisionCounter": 813,
             "lastRetrievedFromServer": 813,
@@ -861,25 +855,25 @@
         },
         "LightningComponentBundle__studentTiles": {
             "serverRevisionCounter": 797,
-            "lastRetrievedFromServer": 465,
+            "lastRetrievedFromServer": 797,
             "memberType": "LightningComponentBundle",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentTiles/studentTiles.js": {
             "serverRevisionCounter": 798,
-            "lastRetrievedFromServer": 466,
+            "lastRetrievedFromServer": 798,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentTiles/studentTiles.js-meta.xml": {
             "serverRevisionCounter": 799,
-            "lastRetrievedFromServer": 467,
+            "lastRetrievedFromServer": 799,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
         "LightningComponentResource__studentTiles/studentTiles.html": {
             "serverRevisionCounter": 800,
-            "lastRetrievedFromServer": 468,
+            "lastRetrievedFromServer": 800,
             "memberType": "LightningComponentResource",
             "isNameObsolete": false
         },
