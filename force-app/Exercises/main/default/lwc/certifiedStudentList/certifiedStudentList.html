@@ -10,10 +10,7 @@
                 variant="destructive">
             </lightning-button>
         </lightning-button-group>
-        <lightning-datatable
-            key-field="contactId"
-            data={certifiedStudents}
-            columns={columnConfig}
+        <lightning-datatable key-field="contactId" data={certifiedStudents} columns={columnConfig}
             onrowselection={onRowSelection}>
         </lightning-datatable>
     </lightning-card>

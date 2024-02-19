@@ -6,13 +6,35 @@ import { NavigationMixin } from "lightning/navigation";
 export default class StudentBrowser extends NavigationMixin(LightningElement) {
 	@wire(getStudents, { instructorId: "$selectedInstructorId", courseDeliveryId: "$selectedDeliveryId" })
 	students;
+	cols = [
+		{
+			fieldName: "Name",
+			label: "Name"
+		},
+		{
+			fieldName: "Title",
+			label: "Title",
+			hiddenOnMobile: true
+		},
+		{
+			fieldName: "Phone",
+			label: "Phone",
+			type: "phone"
+		},
+		{
+			fieldName: "Email",
+			label: "E-Mail",
+			type: "email"
+		}
+	];
+	@wire(MessageContext) messageContext;
 	selectedDeliveryId = "";
 	selectedInstructorId = "";
 	handleFilterChange(event) {
 		this.selectedDeliveryId = event.detail.deliveryId;
 		this.selectedInstructorId = event.detail.instructorId;
 	}
-	@wire(MessageContext) messageContext;
+
 	handleStudentSelected(event) {
 		const studentId = event.detail.studentId;
 		this.updateSelectedStudent(studentId);
@@ -37,26 +59,4 @@ export default class StudentBrowser extends NavigationMixin(LightningElement) {
 		const studentId = event.detail.pk;
 		this.updateSelectedStudent(studentId);
 	}
-
-	cols = [
-		{
-			fieldName: "Name",
-			label: "Name"
-		},
-		{
-			fieldName: "Title",
-			label: "Title",
-			hiddenOnMobile: true
-		},
-		{
-			fieldName: "Phone",
-			label: "Phone",
-			type: "phone"
-		},
-		{
-			fieldName: "Email",
-			label: "E-Mail",
-			type: "email"
-		}
-	];
 }
