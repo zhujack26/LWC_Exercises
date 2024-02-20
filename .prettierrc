@@ -1,5 +1,5 @@
 {
-	"printWidth": 175,
+	"printWidth": 80,
 	"useTabs": true,
 	"trailingComma": "none",
 	"overrides": [
