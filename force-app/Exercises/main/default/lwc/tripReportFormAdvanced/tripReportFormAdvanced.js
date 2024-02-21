@@ -129,6 +129,13 @@ export default class TripReportFormAdvanced extends LightningElement {
 	onSave() {
 		this.saveTripReport();
 	}
+	validateFields() {
+		const fields = Array.from(this.template.querySelectorAll(".validateMe"));
+		return fields.every((currentField) => currentField.checkValidity());
+	}
+	onBlur() {
+		this.saveButtonDisabled = !this.validateFields();
+	}
 	saveTripReport() {
 		const fieldsToSave = {};
 		fieldsToSave[FIELD_DATE.fieldApiName] = this.dateVisited;
