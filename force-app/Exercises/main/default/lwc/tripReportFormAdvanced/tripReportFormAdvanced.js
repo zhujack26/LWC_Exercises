@@ -144,6 +144,9 @@ export default class TripReportFormAdvanced extends LightningElement {
 		});
 		this.dispatchEvent(evt);
 	}
+	onCancel() {
+		this.returnToBrowseMode();
+	}
 	saveTripReport() {
 		const fieldsToSave = {};
 		fieldsToSave[FIELD_DATE.fieldApiName] = this.dateVisited;
